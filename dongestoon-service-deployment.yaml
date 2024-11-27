@@ -61,6 +61,5 @@ spec:
       dnsPolicy: ClusterFirst
       imagePullSecrets:
         - name: docker-reg-89btsv1f
-      restartPolicy: Always
       schedulerName: default-scheduler
       terminationGracePeriodSeconds: 30
