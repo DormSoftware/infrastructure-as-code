@@ -27,7 +27,7 @@ spec:
       containers:
         - name: cms-service
           image: "mahdimazaheri/cms_service"
-          imagePullPolicy: IfNotExists
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
               name: http
