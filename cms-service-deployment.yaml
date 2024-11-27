@@ -27,7 +27,7 @@ spec:
       containers:
         - name: cms-service
           image: "mahdimazaheri/cms_service"
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotExists
           ports:
             - containerPort: 80
               name: http
@@ -49,6 +49,5 @@ spec:
       dnsPolicy: ClusterFirst
       imagePullSecrets:
         - name: docker-reg-89btsv1f
-      restartPolicy: IfNotExists
       schedulerName: default-scheduler
       terminationGracePeriodSeconds: 30
