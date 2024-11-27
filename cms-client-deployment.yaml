@@ -19,15 +19,13 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      annotations:
-        kubectl.kubernetes.io/restartedAt: "{{ .Values.restartedAt }}"
       labels:
         app: cms-client
         name: cms-client
     spec:
       containers:
         - name: cms-client
-          image: "docker.arvancloud.ir/mahdimazaheri/cms_client"
+          image: "docker.arvancloud.ir/mahdimazaheri/cms_client:1.1.31"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4200
