@@ -27,7 +27,7 @@ spec:
       containers:
         - name: dongestoon-service
           image: "{{ .Values.dongestoonServiceImage }}"
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotExists
           ports:
             - containerPort: 80
               name: http
